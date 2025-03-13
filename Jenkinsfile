@@ -9,7 +9,7 @@ pipeline{
         stage("Parameter Demo"){
             steps{
                 echo "booleanParam is set to ${params.enable_service}"
-                echo "string is set to ${params,version}"
+                echo "string is set to ${params.version}"
                 echo "choice is set to ${params.environment}"
             }
         }
