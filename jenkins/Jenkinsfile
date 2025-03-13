@@ -1,9 +1,8 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3.9.0'
-            args '-v /root/.m2:/root/.m2'
-        }
+    agent any
+    environment {
+      MAVEN_HOME = '/apache-maven-3.9.9' // Adjust this to your Maven installation path
+      PATH = "$MAVEN_HOME/bin:$PATH"
     }
     stages {
         stage('Build') {
