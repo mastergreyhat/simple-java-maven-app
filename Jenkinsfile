@@ -2,6 +2,7 @@ pipeline{
     agent any
     parameters{
         booleanParam(name: "enable service", description: "Enable Service", defaultValue: false)
+        string(name: "environment", description: "which environment to deploy", defaultValue: "DEV")
     }
     stages{
         stage("Parameter Demo"){
